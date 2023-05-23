@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const { Client } = require('pg')
 const bodyParser = require('body-parser');
-const port = 3000;
 
 app.use(bodyParser.json());
 
@@ -135,6 +134,3 @@ app.delete('/correo/:id', (req, res) => {
     });
 });
 
-app.listen(port, () => {
-    console.log('Servidor corriendo');
-});
