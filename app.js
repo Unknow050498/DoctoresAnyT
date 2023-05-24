@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 app.get('/', (req, res) => {
     res.send('¡Hola Mundo!');
   });
-  
+
 app.use(bodyParser.json());
 
 const connection = new Client({
@@ -15,7 +15,7 @@ const connection = new Client({
     user: 'ynrnjuotlsnzmv',
     password: '5e76919f62db03cb53671f82817f703cd0bf2bf12eb9f623f74172b347bd6b5e',
     database: 'd3obvvpm9robqg',
-    port: 5432
+    port: process.env.PORT
 });
 
 connection.connect((err) => {
