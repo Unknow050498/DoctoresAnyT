@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3000;
 const { Client } = require('pg')
 const bodyParser = require('body-parser');
 
@@ -132,5 +133,9 @@ app.delete('/correo/:id', (req, res) => {
         if (err) throw err;
         res.send('Cuenta eliminada');
     });
+});
+
+app.listen(port, () => {
+    console.log('Servidor corriendo', port);
 });
 
