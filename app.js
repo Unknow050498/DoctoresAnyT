@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 const connection = new Client({
-    host: '3.236.106.138',
+    host: 'ec2-44-214-132-149.compute-1.amazonaws.com',
     user: 'ynrnjuotlsnzmv',
     password: '5e76919f62db03cb53671f82817f703cd0bf2bf12eb9f623f74172b347bd6b5e',
     database: 'd3obvvpm9robqg',
