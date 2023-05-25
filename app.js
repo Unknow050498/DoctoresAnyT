@@ -4,10 +4,6 @@ const port = process.env.PORT || 3000;
 const { Client } = require('pg')
 const bodyParser = require('body-parser');
 
-app.get('/', (req, res) => {
-    res.send('¡Hola Mundo!');
-  });
-
 app.use(bodyParser.json());
 
 const connection = new Client({
@@ -17,6 +13,10 @@ const connection = new Client({
     database: 'd3obvvpm9robqg',
     port: 5432
 });
+
+app.get('/', (req, res) => {
+    res.send('¡Hola Mundo!');
+  });
 
 connection.connect((err) => {
     if (err) {
