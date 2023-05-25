@@ -15,7 +15,7 @@ const connection = new Client({
     user: 'ynrnjuotlsnzmv',
     password: '5e76919f62db03cb53671f82817f703cd0bf2bf12eb9f623f74172b347bd6b5e',
     database: 'd3obvvpm9robqg',
-    port: process.env.PORT
+    port: 5432
 });
 
 connection.connect((err) => {
