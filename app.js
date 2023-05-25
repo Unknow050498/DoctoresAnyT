@@ -76,7 +76,7 @@ app.delete('/px/:id', (req, res) => {
 
 /*============================================ CORROES DE LOS PACIENTES ============================================*/
 
-app.get('/api/correo', (req, res) => {
+app.get('/correo', (req, res) => {
     connection.query('SELECT * FROM cuentas_px', (err, results) => {
         if (err) {
             console.error('Error al mostrar las cuentas');
@@ -87,7 +87,7 @@ app.get('/api/correo', (req, res) => {
     });
 });
 
-app.get('/api/correo/:id', (req, res) => {
+app.get('/correo/:id', (req, res) => {
     const { id } = req.params;
 
     try {
